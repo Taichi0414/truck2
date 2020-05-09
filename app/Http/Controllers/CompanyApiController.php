@@ -1,0 +1,104 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+use App\Company;
+
+class CompanyApiController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        $items = Company::all();
+        return response()->json($items);
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        $company = new Company();
+        $company->name = $request->name;
+        $company->tel_number = $request->tel_number;
+        $company->email = $request->email;
+        $company->user_flg = $request->user_flg;
+        $company->holder_flg = $request->holder_flg;
+        $company->save();
+        return response()->json();
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        $item = Company::find($id);
+        return response()->json($item);
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        $company = Company::find($id);
+        $company->name = $request->name;
+        $company->tel_number = $request->tel_number;
+        $company->email = $request->email;
+        $company->user_flg = $request->user_flg;
+        $company->holder_flg = $request->holder_flg;
+        $company->save();
+        return response()->json();
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        $company = Company::find($id);
+        $company->delete();
+        return response()->json();
+    }
+}

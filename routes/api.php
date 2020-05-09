@@ -13,6 +13,19 @@ use Illuminate\Http\Request;
 |
 */
 
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::resource('companies', 'CompanyApiController');
+
+Route::resource('drivers', 'DriverController');
+
+// Route::resource('companies', 'TrucknumberApiController');
+
+// Route::resource('companies', 'ReviewApiController');
+
+// Route::resource('companies', 'WaitingplaceApiController');
+
+// Route::resource('companies', 'TimeApiController');
