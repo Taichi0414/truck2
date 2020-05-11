@@ -93,7 +93,7 @@
     ※利用時間計算後にクリック<input type="button" value="利用料金を計算する" onclick="calc_fee();" class="btn btn-primary">
     
     
-    <form method="POST" action="/reservation">
+    <form method="POST" action="{{ url('driver/'.$driver->id.'/waitingplace/'.$waitingplace->id.'/reservation_make') }}">
         {{ csrf_field() }}
         
         <!-- バリデーションエラーの表示に使用-->

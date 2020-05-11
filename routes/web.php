@@ -173,7 +173,7 @@ use Illuminate\Http\Request;
     // 予約時間入力フォーム
     Route::get('driver/{driver}/waitingplace/{waitingplace}/reservation', 'ReservationController@create'); 
     // 送信先
-    Route::post('reservation', 'ReservationController@store'); 
+    Route::post('driver/{driver}/waitingplace/{waitingplace}/reservation_make', 'ReservationController@store'); 
     // 予約一覧
     Route::get('driver/{id}/reservation_comfirm', 'ReservationController@comfirm'); 
     // 削除
