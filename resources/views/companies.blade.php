@@ -13,7 +13,7 @@
          <link href="{{asset('/assets/css/style.css')}}" rel="stylesheet">
 
         <!-- 会社登録フォーム -->
-        <form action="{{ url('truck1/companies') }}" method="POST" class="form-horizontal">
+        <form action="{{ url('companies') }}" method="POST" class="form-horizontal">
             {{ csrf_field() }}
 
             <!-- 会社名 -->
