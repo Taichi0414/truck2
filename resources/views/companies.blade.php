@@ -44,7 +44,8 @@
             <!--booleanのinputtypeをどうすれば良いか？-->
             <div class="form-group">
                 <div class="col-sm-6">
-                    <label for="user_flg" class="col-sm-3 control-label red">待機場所利用者フラグ</label>
+                    <label for="user_flg" class="col-sm-3 control-label red">待機場所利用者フラグ</label><br>
+                    <label for="holder_flg" class="red">※待機場所利用者の場合は1を、そうでない場合は0を入力</label>
                     <input type="text" name="user_flg" class="form-control">
                 </div>
             </div>
@@ -52,7 +53,8 @@
             <!-- 待機場所提供者のフラグ -->
             <div class="form-group">
                 <div class="col-sm-6">
-                    <label for="holder_flg" class="col-sm-3 control-label red">待機場所提供者フラグ</label>
+                    <label for="holder_flg" class="col-sm-3 control-label red">待機場所提供者フラグ</label><br>
+                    <label for="holder_flg" class="red">※待機場所提供者の場合は1を、そうでない場合は0を入力</label>
                     <input type="text" name="holder_flg" class="form-control">
                 </div>
             </div>
